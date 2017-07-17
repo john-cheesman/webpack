@@ -32,6 +32,14 @@ module.exports = {
   {{/if_eq}}
   // add your custom rules here
   'rules': {
+    'indent': [
+      'error',
+      4,
+      {
+        'SwitchCase': 1
+      }
+    ],
+    'space-before-function-paren': 0,
     {{#if_eq lintConfig "standard"}}
     // allow paren-less arrow functions
     'arrow-parens': 0,
