@@ -11,15 +11,15 @@
 
 <script>
 {{#unless router}}
-import Hello from './components/Hello'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import Hello from './components/Hello'
 
 {{/unless}}
 export default {
-    name: 'app'{{#router}}{{#if_eq lintConfig "airbnb"}},{{/if_eq}}{{else}},
+    name: 'app'{{#unless router}},
     components: {
-        Hello{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-    }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}{{/router}}
-}{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+        Hello
+    }{{/unless}}
+}
 </script>
 
 <style>
@@ -32,3 +32,4 @@ export default {
     margin-top: 60px;
 }
 </style>
+
